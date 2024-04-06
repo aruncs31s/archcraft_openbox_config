@@ -11,7 +11,7 @@
   <focus>
     <focusNew>yes</focusNew>
     <focusLast>yes</focusLast>
-    <followMouse>no</followMouse>
+    <followMouse>yes</followMouse>
     <underMouse>no</underMouse>
     <focusDelay>200</focusDelay>
     <raiseOnFocus>no</raiseOnFocus>
@@ -25,31 +25,31 @@
   </placement>
   <!-- Theme -->
   <theme>
-    <name>Arc-Dark</name>
+    <name>Manhattan</name>
     <titleLayout>DLIMC</titleLayout>
-    <keepBorder>no</keepBorder>
+    <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>JetBrains Mono</name>
-      <size>9</size>
-      <weight>Bold</weight>
-      <slant>Normal</slant>
+      <name>CaskaydiaCove Nerd Font Propo</name>
+      <size>10</size>
+      <weight>Normal</weight>
+      <slant>Italic</slant>
     </font>
     <font place="InactiveWindow">
-      <name>JetBrains Mono</name>
-      <size>9</size>
+      <name>CaskaydiaCove Nerd Font Propo</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>JetBrains Mono</name>
+      <name>CaskaydiaCove Nerd Font</name>
       <size>9</size>
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>JetBrains Mono</name>
-      <size>9</size>
+      <name>CaskaydiaCove Nerd Font</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -68,7 +68,7 @@
   </theme>
   <!-- Workspace -->
   <desktops>
-    <number>5</number>
+    <number>8</number>
     <firstdesk>0</firstdesk>
     <popupTime>0</popupTime>
     <names>
@@ -77,6 +77,9 @@
       <name>3</name>
       <name>4</name>
       <name>5</name>
+      <name>6</name>
+      <name>7</name>
+      <name>8</name>
     </names>
   </desktops>
   <!-- Resize -->
@@ -115,11 +118,11 @@
     <chainQuitKey>C-g</chainQuitKey>
     <!-- ######## Global Actions ######## -->
     <!-- Action : ShowMenu -->
-    <keybind key="W-space">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
-      </action>
-    </keybind>
+    <!-- <keybind key="W-space"> -->
+    <!--   <action name="ShowMenu"> -->
+    <!--     <menu>root-menu</menu> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
     <keybind key="A-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
@@ -208,6 +211,21 @@
         <to>5</to>
       </action>
     </keybind>
+    <keybind key="W-6">
+      <action name="GoToDesktop">
+        <to>6</to>
+      </action>
+    </keybind>
+    <keybind key="W-7">
+      <action name="GoToDesktop">
+        <to>7</to>
+      </action>
+    </keybind>
+    <keybind key="W-8">
+      <action name="GoToDesktop">
+        <to>8</to>
+      </action>
+    </keybind>
     <!-- Action : Add/Remove Desktop -->
     <keybind key="W-equal">
       <action name="AddDesktop">
@@ -226,7 +244,7 @@
       </action>
     </keybind>
     <!-- Action : ToggleShowDesktop -->
-    <keybind key="W-d">
+    <keybind key="W-S-w">
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Action : Session -->
@@ -283,6 +301,21 @@
     <keybind key="S-W-5">
       <action name="SendToDesktop">
         <desktop>5</desktop>
+      </action>
+    </keybind>
+    <keybind key="S-W-6">
+      <action name="SendToDesktop">
+        <desktop>6</desktop>
+      </action>
+    </keybind>
+    <keybind key="S-W-7">
+      <action name="SendToDesktop">
+        <desktop>7</desktop>
+      </action>
+    </keybind>
+    <keybind key="S-W-8">
+      <action name="SendToDesktop">
+        <desktop>8</desktop>
       </action>
     </keybind>
     <!-- Action : MoveRelative -->
@@ -546,10 +579,10 @@
     <keybind key="A-F4">
       <action name="Close"/>
     </keybind>
-    <keybind key="A-F5">
+    <keybind key="W-z">
       <action name="Iconify"/>
     </keybind>
-    <keybind key="A-F6">
+    <keybind key="W-space">
       <action name="ToggleMaximize"/>
     </keybind>
     <keybind key="A-F7">
@@ -558,13 +591,13 @@
         <command>dunstify -u low -h string:x-dunst-stack-tag:obaction "Toggled Shade"</command>
       </action>
     </keybind>
-    <keybind key="A-F8">
+    <keybind key="W-y">
       <action name="ToggleDecorations"/>
       <action name="Execute">
         <command>dunstify -u low -h string:x-dunst-stack-tag:obaction "Toggled Decorations"</command>
       </action>
     </keybind>
-    <keybind key="A-F9">
+    <keybind key="W-t">
       <action name="ToggleOmnipresent"/>
       <action name="Execute">
         <command>dunstify -u low -h string:x-dunst-stack-tag:obaction "Toggled Omnipresent"</command>
@@ -790,7 +823,7 @@
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind action="Drag" button="A-Right">
+      <mousebind action="Drag" button="W-Right">
         <action name="Resize"/>
       </mousebind>
     </context>

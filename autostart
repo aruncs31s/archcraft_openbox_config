@@ -38,8 +38,8 @@ exec plank &
 exec thunar --daemon &
 
 ## Enable Super Keys For Menu
-ksuperkey -e 'Super_L=Alt_L|F1' &
-ksuperkey -e 'Super_R=Alt_L|F1' &
+# ksuperkey -e 'Super_L=Alt_L|F1' &
+# ksuperkey -e 'Super_R=Alt_L|F1' &
 
 ## These applets are specifically for tint2 panel.
 ## If you're using tint2 as panel, Uncomment these applets.
